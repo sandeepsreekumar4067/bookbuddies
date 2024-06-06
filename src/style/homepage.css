@@ -5,6 +5,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
+    padding: 0.5rem;
     justify-content: center;
 }
 .home-component{
@@ -63,5 +65,116 @@
     align-items: end;
     justify-content: center;
     color: grey;
-    background-color: red;
+}
+@media screen and (max-width: 800px) {
+    .home-component{
+        flex-direction: column;
+        height: 100vh;
+    }
+    .home-description{
+        width: 100%;
+        padding: 0.5rem;
+    }
+    .home-description h1{
+        font-size: 2.5rem;
+    }
+    .home-description h3{
+        font-size: 1.2rem;
+    }
+    .home-description input{
+        width: 8rem;
+        font-size: 1rem;
+        padding: 0.4rem;
+    }
+    .book-image{
+        width: 100%;
+        height: auto;
+    }
+    .home-footer-title{
+        font-size: 1.8rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .home-component{
+        flex-direction: column;
+        height: 100vh;
+    }
+    .home-description{
+        width: 100%;
+        padding: 0.5rem;
+    }
+    .home-description h1{
+        font-size: 2.5rem;
+    }
+    .home-description h3{
+        font-size: 1.2rem;
+    }
+    .home-description input{
+        width: 8rem;
+        font-size: 1rem;
+        padding: 0.4rem;
+    }
+    .book-image{
+        width: 100%;
+        height: auto;
+    }
+    .home-footer-title{
+        font-size: 1.8rem;
+    }
+}
+@media screen and (max-width: 400px) {
+    .home-component{
+        flex-direction: column;
+        height: auto;
+    }
+    .home-description{
+        width: 100%;
+        padding: 0.5rem;
+    }
+    .home-description h1{
+        font-size: 2.5rem;
+    }
+    .home-description h3{
+        font-size: 1.2rem;
+    }
+    .home-description input{
+        width: 8rem;
+        font-size: 1rem;
+        padding: 0.4rem;
+    }
+    .book-image{
+        width: 100%;
+        height: auto;
+    }
+    .home-footer-title{
+        font-size: 1.8rem;
+    }
+}
+@media screen and (max-width: 300px) {
+    .home-component{
+        flex-direction: column;
+        height: auto;
+    }
+    .home-description{
+        width: 100%;
+        padding: 0.5rem;
+    }
+    .home-description h1{
+        font-size: 2rem;
+    }
+    .home-description h3{
+        font-size: 1rem;
+    }
+    .home-description input{
+        width: 8rem;
+        font-size: 1rem;
+        padding: 0.4rem;
+    }
+    .book-image{
+        width: 100%;
+        height: auto;
+    }
+    .home-footer-title{
+        font-size: 1.5rem;
+    }
 }

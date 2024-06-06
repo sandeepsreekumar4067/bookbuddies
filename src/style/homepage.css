@@ -66,7 +66,44 @@
     justify-content: center;
     color: grey;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1210px) {
+    .home-container{
+        height: auto;
+    }
+    .home-component{
+        flex-direction: row;
+        height: 100vh;
+    }
+    .home-description{
+        width:50%;
+        padding: 2rem;
+    }
+    .home-description h1{
+        font-size: 4rem;
+    }
+    .home-description h3{
+        font-size: 1.2rem;
+    }
+    .home-description input{
+        width: 10rem;
+        padding: 0.6rem;
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
+    .book-image{
+        width: 100%;
+        height: 100%;
+    }
+    .home-footer-title{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        margin-top: 10rem;
+    }
+}
+@media screen and (max-width: 1000px) {
     .home-container{
         height: auto;
     }
@@ -103,67 +140,16 @@
     }
 }
 @media screen and (max-width: 800px) {
-    .home-container{
+    .home-component{
+        flex-direction: column;
         height: auto;
     }
-    .home-component{
-        flex-direction: column;
-        height: 100vh;
-    }
     .home-description{
-        width: 100%;
-        padding: 2rem;
-    }
-    .home-description h1{
-        font-size: 2.5rem;
-    }
-    .home-description h3{
-        font-size: 1.2rem;
-    }
-    .home-description input{
-        width: 8rem;
-        font-size: 1rem;
-        padding: 0.4rem;
-    }
-    .book-image{
-        width: 100%;
-        height: 100%;
-    }
-    .home-footer-title{
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 3rem;
-        margin-top: 10rem;
-    }
-}
-@media screen and (max-width: 673px) {
-    .home-footer-title{
-        margin-top: 8rem;
-    }
-}
-@media screen and (max-width: 673px) {
-    .home-footer-title{
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.8rem;
-        margin-top: 5rem;
-    }
-}
-@media screen and (max-width: 500px) {
-    .home-component{
-        flex-direction: column;
-        height: 100vh;
-    }
-    .home-description{
-        width: 100%;
+        width: 60%;
         padding: 0.5rem;
     }
     .home-description h1{
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
     .home-description h3{
         font-size: 1.2rem;
@@ -178,9 +164,41 @@
         height: auto;
     }
     .home-footer-title{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .home-component{
+        flex-direction: column;
+        height: auto;
+        background-color: red;
+    }
+    .home-description{
+        width: 80%;
+        padding: 0.5rem;
+    }
+    .home-description h1{
+        font-size: 3rem;
+    }
+    .home-description h3{
+        font-size: 1.1rem;
+    }
+    .home-description input{
+        width: 7rem;
+        font-size: 1rem;
+        padding: 0.4rem;
+    }
+    .book-image{
+        width: 100%;
+        height: auto;
+    }
+    .home-footer-title{
+        background-color: wheat;
         font-size: 1.8rem;
     }
 }
+
 @media screen and (max-width: 400px) {
     .home-component{
         flex-direction: column;
@@ -194,38 +212,10 @@
         font-size: 2.5rem;
     }
     .home-description h3{
-        font-size: 1.2rem;
-    }
-    .home-description input{
-        width: 8rem;
-        font-size: 1rem;
-        padding: 0.4rem;
-    }
-    .book-image{
-        width: 100%;
-        height: auto;
-    }
-    .home-footer-title{
-        font-size: 1.8rem;
-    }
-}
-@media screen and (max-width: 300px) {
-    .home-component{
-        flex-direction: column;
-        height: auto;
-    }
-    .home-description{
-        width: 100%;
-        padding: 0.5rem;
-    }
-    .home-description h1{
-        font-size: 2rem;
-    }
-    .home-description h3{
         font-size: 1rem;
     }
     .home-description input{
-        width: 8rem;
+        width: 6rem;
         font-size: 1rem;
         padding: 0.4rem;
     }

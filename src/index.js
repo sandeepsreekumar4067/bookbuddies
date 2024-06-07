@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Home from './components/homepage';
+import BookInterface from './components/bookinterface';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Home/>
+    <BookInterface/>
   </React.StrictMode>
 );
 

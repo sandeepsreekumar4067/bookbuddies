@@ -7,6 +7,7 @@
     align-items: center;
     box-sizing: border-box;
     padding: 0.5rem;
+  background-color: #FFF7F1;
     justify-content: center;
 }
 .home-component{
@@ -172,7 +173,6 @@
     .home-component{
         flex-direction: column;
         height: auto;
-        background-color: red;
     }
     .home-description{
         width: 80%;
@@ -194,7 +194,6 @@
         height: auto;
     }
     .home-footer-title{
-        background-color: wheat;
         font-size: 1.8rem;
     }
 }

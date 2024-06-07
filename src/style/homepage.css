@@ -69,6 +69,7 @@
 }
 @media screen and (max-width: 1210px) {
     .home-container{
+        padding-top: 15%;
         height: auto;
     }
     .home-component{

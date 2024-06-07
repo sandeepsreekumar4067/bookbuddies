@@ -1,32 +1,39 @@
-.navigation-bar-container{
-    height: 8rem;
+.navigation-bar-container {
+    height: auto;
     width: 100%;
     position: fixed;
     z-index: 100;
-    background-color:#FFE0B5;
+    background-color: #FFE0B5;
     display: flex;
+    transition: 0.4s ease-in-out;
     align-items: center;
 }
-.navigationBar-title{
+
+.navigationBar-title {
     width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.navigationBar-title h1{
+
+.navigationBar-title h1 {
     font-size: 3.4rem;
     letter-spacing: 0.5rem;
     color: #75A47F;
 }
-.navbar-components{
+
+.navbar-components {
     width: 50%;
     height: 90%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    box-sizing: border-box;
+    transition: 0.4s ease-in-out;
 }
-.search-area{
+
+.search-area {
     width: 18rem;
     height: 2rem;
     gap: calc(2%);
@@ -34,7 +41,8 @@
     align-items: center;
     justify-content: end;
 }
-.searchfield{
+
+.searchfield {
     border: none;
     width: 0;
     height: 0;
@@ -42,11 +50,133 @@
     transition: 0.4s;
     background-color: #FFE0B5;
 }
-.searchfield.visible{
+
+.searchfield.visible {
     width: 100%;
     border-radius: 20px;
     padding: 0.5rem;
     height: 60%;
     justify-content: space-evenly;
     background-color: white;
+}
+
+.menu-button {
+    display: none;
+    background-color: #75A47F;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    .navigation-bar-container {
+        flex-direction: column;
+    }
+
+    .navigationBar-title {
+        width: 100%;
+    }
+
+    .navigationBar-title h1 {
+        font-size: 2.6rem;
+    }
+
+    .navbar-components {
+        width: 100%;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom: 0.3rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .navigation-bar-container {
+        flex-direction: column;
+    }
+
+    .navigationBar-title {
+        width: 100%;
+    }
+
+    .navigationBar-title h1 {
+        font-size: 2.6rem;
+    }
+
+    .navbar-components {
+        width: 100%;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom: 0.3rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navigation-bar-container {
+        flex-direction: column;
+    }
+
+    .navigationBar-title {
+        width: 100%;
+    }
+
+    .navigationBar-title h1 {
+        font-size: 2.6rem;
+    }
+
+    .navbar-components {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Hide menu initially */
+    }
+
+    .navbar-components.active {
+        display: flex; /* Show menu when active */
+        gap: 0.5rem;
+    }
+    .navbar-components.active > .search-area{
+        justify-content: center;
+    }
+    .menu-button {
+        display: block;
+        margin-top: 1rem;
+        margin-bottom: 0.6rem;
+    }
+}
+
+
+@media screen and (max-width: 300px) {
+    .navigation-bar-container {
+        flex-direction: column;
+    }
+
+    .navigationBar-title {
+        width: 100%;
+    }
+
+    .navigationBar-title h1 {
+        font-size: 2.4rem;
+    }
+
+    .navbar-components {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Hide menu initially */
+    }
+
+    .navbar-components.active {
+        display: flex; /* Show menu when active */
+        gap: 0.5rem;
+    }
+    .navbar-components.active > .search-area{
+        justify-content: center;
+    }
+    .menu-button {
+        display: block;
+        margin-top: 1rem;
+        margin-bottom: 0.6rem;
+    }
 }

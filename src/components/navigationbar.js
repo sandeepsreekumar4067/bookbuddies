@@ -4,11 +4,13 @@ import "../style/navigationbar.css";
 
 const NavigationBar = () => {
     const [isExpanded, setIsExpanded] = useState(false);
-
+    const [inputValue,setInputValue] = useState("Search...")
     const handleSearchIconClick = () => {
-        setIsExpanded(!isExpanded);
+        setIsExpanded(true);
     };
-
+    const handleSearchInput = (e)=>{
+        setInputValue(e.target.value)
+    }
     return ( 
         <div className="navigation-bar-container">
             <div className="navigationBar-title">
@@ -16,20 +18,8 @@ const NavigationBar = () => {
             </div>
             <div className="navbar-components">
                 <div className="search-area">
-                  {
-                    isExpanded?(
-                        <input
-                        type="text"
-                        className={`search-input ${isExpanded ? 'expand' : ''}`}
-                        placeholder="Search..."
-                    />
-                    ):(
-                        <FaSearch
-                        className="search-icon"
-                        onClick={handleSearchIconClick}
-                    />
-                    )
-                  }
+                  <FaSearch onClick={handleSearchIconClick}/>
+                  <input onChange={handleSearchInput} type="text" value={inputValue} placeholder={isExpanded?"Search..":""} className={`searchfield ${isExpanded?"visible":""} `} />
                 </div>
                 <span>Home</span>
                 <span>Login</span>

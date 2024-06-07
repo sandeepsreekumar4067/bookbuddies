@@ -2,10 +2,9 @@
     height: auto;
     width: 100%;
     display: flex;
-  background-color: #FFF7F1;
-
+    background-color: #FFF7F1;
     flex-wrap: wrap; /* Allow items to wrap to the next line */
-    gap: 1rem; /* Adjust spacing between books */
+    gap: 1.8rem; /* Adjust spacing between books */
     box-sizing: border-box;
     padding: 1rem;
     justify-content: center; /* Center the content */
@@ -20,9 +19,7 @@
     transition: 0.3s ;
     text-align: center;
     box-sizing: border-box; /* Include padding and border in element's total width and height */
-    animation: bookInterfaceEntry linear;
-    animation-timeline: view();
-    animation-range: entry();
+    
 }
 .book-item:hover{
     scale: 1.08;

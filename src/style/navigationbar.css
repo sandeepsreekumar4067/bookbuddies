@@ -1,0 +1,28 @@
+.navigation-bar-container{
+    height: 8rem;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background-color:#FFE0B5;
+    display: flex;
+    align-items: center;
+}
+.navigationBar-title{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navigationBar-title h1{
+    font-size: 3.4rem;
+    letter-spacing: 0.5rem;
+    color: #75A47F;
+}
+.navbar-components{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}

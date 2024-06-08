@@ -1,0 +1,91 @@
+.login-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background-color: #8294C4;
+}
+.login-components{
+    margin-top: 8%;
+    height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-input-container{
+    height: 30rem;
+    width: 25%;
+    background: rgb(255, 255, 255,0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.8rem;
+    border-bottom-right-radius: 20px;
+}
+.login-input-container input[type=text]{
+    width: 90%;
+    height: 2rem;
+    padding: 0.5rem;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+
+}
+.login-input-container input[type=password]{
+    width: 90%;
+    height: 2rem;
+    padding: 0.5rem;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+.login-input-container input[type="button"]{
+    width: 30%;
+    height: 2rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background-color: #75A47F;
+    color: white;
+}
+.image-container{
+    height: 30rem;
+    width: 25%;
+    background-color: white;
+    border-top-left-radius: 20px;
+    position: relative;
+}
+.image-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.gradient {
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-top-left-radius: 20px;
+    background: linear-gradient(120deg,#FC819E , #A0DEFF);
+    z-index: 1; 
+    text-align: center;
+}
+.gradient h1{
+    color: white;
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+}
+.gradient h2{
+    color: black;
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem ;
+}

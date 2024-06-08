@@ -89,3 +89,22 @@
     font-size: 2.5rem;
     letter-spacing: 0.2rem ;
 }
+@media screen and (max-width:300px) {
+    .login-container{
+        height: auto;
+    }
+    .login-components{
+        margin-top: 50%;
+    }
+    .login-components{
+        flex-direction: column;
+    }
+    .image-container{
+        width: 100%;
+    }
+    .login-input-container{
+        width: 100%;
+        background-color: #FFB38E;
+        border-bottom-right-radius: 0;
+    }
+}

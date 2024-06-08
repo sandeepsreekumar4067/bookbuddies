@@ -6,11 +6,12 @@ import Home from './components/homepage';
 import BookInterface from './components/bookinterface';
 import NavigationBar from './components/navigationbar';
 import Login from './components/login';
+import Signup from './components/signup';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Login/>
+    <Signup/>
   </React.StrictMode>
 );
 

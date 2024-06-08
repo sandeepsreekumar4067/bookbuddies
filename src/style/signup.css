@@ -26,7 +26,7 @@
     gap: 1.8rem;
     border-bottom-right-radius: 20px;
 }
-.signup-input-container input[type=text]{
+.signup-input-container input[type=email]{
     width: 90%;
     height: 2rem;
     padding: 0.5rem;

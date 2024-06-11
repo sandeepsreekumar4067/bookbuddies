@@ -7,7 +7,7 @@ import BookInterface from './components/bookinterface';
 import NavigationBar from './components/navigationbar';
 import Login from './components/login';
 import Signup from './components/signup';
-
+import NotFound from './components/notFound';
 import { BrowserRouter as Router , Routes,Route } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,8 +16,10 @@ root.render(
     <NavigationBar/>
     <Routes>
       <Route path='/' element={<Home/>}/>
+      <Route path='/home' element={<Home/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/signup' element={<Signup/>}/>
+      <Route path='*' element={<NotFound/>}/>
     </Routes>
   </Router>
 );

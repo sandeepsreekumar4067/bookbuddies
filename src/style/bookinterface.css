@@ -2,7 +2,7 @@
     height: auto;
     width: 100%;
     display: flex;
-    background-color: #FFF7F1;
+    background-color: #5A72A0;
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     gap: 1.8rem; /* Adjust spacing between books */
     box-sizing: border-box;
@@ -13,9 +13,9 @@
     flex: 1 1 calc(25% - 1rem); /* Four items per row, accounting for gap */
     height: 18rem;
     width: 5rem;
-    border-radius: 10px;
+    border-radius: 20px 0 20px 0;
     box-shadow: 1px 1px 3px black;
-    background-color: #FFE8C8;
+    background: rgb(255, 255,255,0.25);
     transition: 0.3s ;
     text-align: center;
     box-sizing: border-box; /* Include padding and border in element's total width and height */

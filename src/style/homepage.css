@@ -7,7 +7,7 @@
     box-sizing: border-box;
     padding: 0.5rem;
     padding-top: 10%;
-    background-color: #FFF7F1;
+    background-color: #5A72A0;
     justify-content: center;
 }
 .home-component{
@@ -43,7 +43,7 @@
     border: none;
     border-radius: 20px;
     color: white;
-    background-color: #75A47F;
+    background-color: #19376D;
     transition: 0.4s;
 }
 .home-description input:active{
@@ -65,7 +65,7 @@
     display: flex;
     align-items: end;
     justify-content: center;
-    color: grey;
+    color: whitesmoke;
 }
 @media screen and (max-width: 1210px) {
     .home-container{
@@ -205,7 +205,7 @@
     .home-component{
         flex-direction: column;
         height: auto;
-        padding-top: 25%;
+        padding-top: 28%;
     }
     .home-description{
         width: 100%;

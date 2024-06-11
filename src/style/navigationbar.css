@@ -3,7 +3,7 @@
     width: 100%;
     position: fixed;
     z-index: 100;
-    background-color: #FFE0B5;
+    background-color: #8CABFF;
     display: flex;
     transition: 0.4s ease-in-out;
     align-items: center;
@@ -20,7 +20,7 @@
 .navigationBar-title h1 {
     font-size: 3.4rem;
     letter-spacing: 0.5rem;
-    color: #75A47F;
+    color: #27374D;
 }
 
 .navbar-components {
@@ -47,8 +47,8 @@
     width: 0;
     height: 0;
     outline: none;
+    background: rgb(255, 255, 255,0);
     transition: 0.4s;
-    background-color: #FFE0B5;
 }
 
 .searchfield.visible {

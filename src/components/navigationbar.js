@@ -1,24 +1,34 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
+import { Link, useLocation } from "react-router-dom";
 import "../style/navigationbar.css";
-import { Link } from "react-router-dom";
 
 const NavigationBar = () => {
     const [isExpanded, setIsExpanded] = useState(false);
     const [inputValue, setInputValue] = useState("");
     const [menuActive, setMenuActive] = useState(false);
 
+    const location = useLocation();
+
+    // Toggle the expansion of the search input field
     const handleSearchIconClick = () => {
         setIsExpanded(true);
     };
 
+    // Update the input value state
     const handleSearchInput = (e) => {
         setInputValue(e.target.value);
     };
 
+    // Toggle the menu active state
     const handleMenuButtonClick = () => {
         setMenuActive(!menuActive);
     };
+
+    // Reset menuActive state on route change
+    useEffect(() => {
+        setMenuActive(false);
+    }, [location]);
 
     return (
         <div className="navigation-bar-container">
@@ -42,9 +52,7 @@ const NavigationBar = () => {
                 <Link to="/signup" className="nav-link"><span>Signup</span></Link>
             </div>
             <button className="menu-button" onClick={handleMenuButtonClick}>
-                {
-                    menuActive?"Close":"Menu"
-                }
+                {menuActive ? "Close" : "Menu"}
             </button>
         </div>
     );

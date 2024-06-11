@@ -176,6 +176,9 @@
         margin-top: 1rem;
         margin-bottom: 0.6rem;
     }
+    .nav-link::before{
+        display: none;
+    }
 }
 
 
@@ -213,6 +216,8 @@
     }
     .nav-link{
         font-size: 0.8rem;
-        
+    }
+    .nav-link::before{
+        display: none;
     }
 }

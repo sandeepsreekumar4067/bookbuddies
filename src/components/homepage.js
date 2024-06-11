@@ -1,5 +1,5 @@
 import "../style/homepage.css"
-import bookPng from "../assets/tea and book.png"
+import bookPng from "../assets/fronImage2.png"
 import BookInterface from "./bookinterface";
 const Home = () => {
     return ( 

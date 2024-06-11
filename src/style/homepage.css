@@ -46,6 +46,9 @@
     background-color: #19376D;
     transition: 0.4s;
 }
+.home-description input:hover{
+    cursor: pointer;
+}
 .home-description input:active{
     scale: 0.9;
 }

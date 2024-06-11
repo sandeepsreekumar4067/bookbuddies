@@ -59,7 +59,9 @@
     outline: none;
     border: none;
 }
-
+.icon:hover{
+    cursor: pointer;
+}
 .login-input-container input[type="button"]{
     width: 30%;
     height: 2rem;

@@ -60,13 +60,13 @@ const Signup = () => {
                         <input type={`${passVisibility?"text":"password"}`} placeholder="password.." value={password} onChange={handlePasswordEntry} />     
                         {
                             passVisibility?(
-                                <FaEye size={20} onClick={
+                                <FaEye className="icon" size={20} onClick={
                                     ()=>{
                                         setpassVisibility(!passVisibility)
                                     }
                                 }/>
                             ):(
-                                <FaEyeSlash size={20} onClick={
+                                <FaEyeSlash className="icon" size={20} onClick={
                                     ()=>{
                                         setpassVisibility(!passVisibility)
                                     }
@@ -78,13 +78,13 @@ const Signup = () => {
                         <input type={`${confirmPasswordVisibility?"text":"password"}`} placeholder="Confirm the password.." value={confirmPassword} onChange={handleConfirmPassword} />     
                         {
                             confirmPasswordVisibility?(
-                                <FaEye size={20} onClick={
+                                <FaEye className="icon" size={20} onClick={
                                     ()=>{
                                         setConfirmPasswordVisibility(!confirmPasswordVisibility)
                                     }
                                 }/>
                             ):(
-                                <FaEyeSlash size={20} onClick={
+                                <FaEyeSlash className="icon" size={20} onClick={
                                     ()=>{
                                         setConfirmPasswordVisibility(!confirmPasswordVisibility)
                                     }

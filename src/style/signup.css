@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    background-color: #8294C4;
+    background-color: #5A72A0;
 }
 .signup-components{
     margin-top: 8%;
@@ -59,7 +59,9 @@
     outline: none;
     border: none;
 }
-
+.icon:hover{
+    cursor: pointer;
+}
 .signup-input-container input[type="button"]{
     width: 30%;
     height: 2rem;

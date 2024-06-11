@@ -48,13 +48,13 @@ const Login = () => {
                     <input type={`${passwordVisibility?"text":"password"}`} placeholder="Password..." value={password} onChange={handlePasswordInput} />
                     {
                         passwordVisibility?(
-                            <FaEye size={20} onClick={
+                            <FaEye size={20} className="icon" onClick={
                                 ()=>{
                                     setPasswordVisibility(!passwordVisibility)
                                 }
                             }/>
                         ):( 
-                            <FaEyeSlash size={20} onClick={
+                            <FaEyeSlash className="icon" size={20} onClick={
                                 ()=>{
                                     setPasswordVisibility(!passwordVisibility)
                                 }

@@ -22,7 +22,9 @@ const BookInterface = () => {
         { name: 'Jane Eyre', author: 'Charlotte Brontë' },
         { name: 'Wuthering Heights', author: 'Emily Brontë' },
         { name: 'Brave New World', author: 'Aldous Huxley' },
-        { name: 'The Iliad', author: 'Homer' }
+        { name: 'The Iliad', author: 'Homer' },
+        { name: "random book ", author:"random person"},
+        
     ];
     
     return ( 

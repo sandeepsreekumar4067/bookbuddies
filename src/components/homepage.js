@@ -1,5 +1,6 @@
 import "../style/homepage.css"
 import bookPng from "../assets/tea and book.png"
+import BookInterface from "./bookinterface";
 const Home = () => {
     return ( 
         <div className="home-container">
@@ -20,6 +21,7 @@ const Home = () => {
             <div className="home-footer-title">
                 <p>Scroll Down</p>
             </div>
+            <BookInterface/>
         </div>
      );
 }

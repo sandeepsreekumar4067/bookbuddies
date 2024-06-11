@@ -11,7 +11,7 @@
 }
 .book-item {
     flex: 1 1 calc(25% - 1rem); /* Four items per row, accounting for gap */
-    height: 15rem;
+    height: 18rem;
     width: 5rem;
     border-radius: 10px;
     box-shadow: 1px 1px 3px black;

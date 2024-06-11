@@ -69,6 +69,38 @@
     border-radius: 5px;
     cursor: pointer;
 }
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    width: 4.2rem;
+    height: 2rem;
+    position: relative;
+    overflow: hidden; /* Ensure the pseudo-element doesn't overflow the nav-link */
+    transition: color 0.5s; /* Smooth transition for text color change */
+}
+
+.nav-link::before {
+    border-radius: 10px;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background-color: black; 
+    z-index: -1; 
+    transition: width 0.5s; 
+}
+
+.nav-link:hover::before {
+    width: 100%; 
+}
+
+.nav-link:hover {
+    color: white;
+}
 
 @media screen and (max-width: 1000px) {
     .navigation-bar-container {
@@ -178,5 +210,9 @@
         display: block;
         margin-top: 1rem;
         margin-bottom: 0.6rem;
+    }
+    .nav-link{
+        font-size: 0.8rem;
+        
     }
 }

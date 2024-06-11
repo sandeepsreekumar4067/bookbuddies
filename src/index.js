@@ -8,11 +8,18 @@ import NavigationBar from './components/navigationbar';
 import Login from './components/login';
 import Signup from './components/signup';
 
+import { BrowserRouter as Router , Routes,Route } from 'react-router-dom';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Signup/>
-  </React.StrictMode>
+  <Router>
+    <NavigationBar/>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/login' element={<Login/>}/>
+      <Route path='/signup' element={<Signup/>}/>
+    </Routes>
+  </Router>
 );
 
 // If you want to start measuring performance in your app, pass a function

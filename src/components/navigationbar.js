@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import "../style/navigationbar.css";
+import { Link } from "react-router-dom";
 
 const NavigationBar = () => {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -36,9 +37,9 @@ const NavigationBar = () => {
                         onBlur={() => { if (inputValue === "") setIsExpanded(false); }}  // Collapse input when it loses focus if empty
                     />
                 </div>
-                <span>Home</span>
-                <span>Login</span>
-                <span>Signup</span>
+                <Link to="/" className="nav-link"><span>Home</span></Link>
+                <Link to="/login" className="nav-link"><span>Login</span></Link>
+                <Link to="/signup" className="nav-link"><span>Signup</span></Link>
             </div>
             <button className="menu-button" onClick={handleMenuButtonClick}>
                 {

@@ -37,7 +37,7 @@ const NavigationBar = () => {
             </div>
             <div className={`navbar-components ${menuActive ? "active" : ""}`}>
                 <div className="search-area">
-                    <FaSearch className="search-icon" onClick={handleSearchIconClick} />
+                    <FaSearch size={20} className="search-icon" onClick={handleSearchIconClick} />
                     <input
                         type="text"
                         value={inputValue}

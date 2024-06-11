@@ -1,7 +1,12 @@
 import "../style/login.css"
 import loginImage from "../assets/loginImage.png"
 import NavigationBar from "./navigationbar";
+import { useState } from "react";
 const Login = () => {
+    const [email,setEmail] = useState('')
+    const handleEmailInput = (e)=>{
+        setEmail(e.target.value)
+    }
     return ( 
         <div className="login-container">
             <NavigationBar/>
@@ -14,8 +19,8 @@ const Login = () => {
                     </div>
                 </div>
                 <div className="login-input-container">
-                    <input type="text" placeholder="Username" />
-                    <input type="password" placeholder="Password"  />
+                    <input type="text" value={email} onChange={setEmail} placeholder="Email..." />
+                    <input type="password" placeholder="Password..."  />
                     <input type="button" value="Login" />
                 </div>
             </div>

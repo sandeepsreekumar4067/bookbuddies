@@ -68,7 +68,7 @@
     font-size: 1rem;
     border: none;
     outline: none;
-    background-color: #75A47F;
+    background-color: #19376D;
     color: white;
 }
 .image-container{
@@ -140,7 +140,10 @@
     }
     .login-input-container{
         width: 100%;
-        background: linear-gradient(120deg,#A0DEFF,#F6FDC3) ;
+        /* background: linear-gradient(120deg,#A0DEFF,#F6FDC3) ; */
+        background: rgb(255, 255, 255,0.25);
+        
+
         border-bottom-right-radius: 0;
     }
     .gradient{
@@ -160,7 +163,10 @@
     }
     .login-input-container{
         width: 100%;
-        background: linear-gradient(120deg,#A0DEFF,#F6FDC3) ;
+        /* background: linear-gradient(120deg,#A0DEFF,#F6FDC3) ; */
+        background: rgb(255, 255, 255,0.25);
+        
+        
         border-bottom-right-radius: 0;
     }
     .gradient{
@@ -183,7 +189,9 @@
     }
     .login-input-container{
         width: 100%;
-        background: linear-gradient(120deg,#A0DEFF,#F6FDC3) ;
+        /* background: linear-gradient(120deg,#A0DEFF,#F6FDC3) ; */
+        background-color: #5A72A0;
+
         border-bottom-right-radius: 0;
     }
     .gradient{
@@ -206,7 +214,9 @@
     }
     .login-input-container{
         width: 100%;
-        background: linear-gradient(120deg,#A0DEFF,#F6FDC3) ;
+        /* background: linear-gradient(120deg,#A0DEFF,#F6FDC3) ; */
+        background-color: #5A72A0;
+
         border-bottom-right-radius: 0;
     }
     .gradient{
@@ -229,7 +239,9 @@
     }
     .login-input-container{
         width: 100%;
-        background: linear-gradient(120deg,#A0DEFF,#F6FDC3) ;
+        /* background: linear-gradient(120deg,#A0DEFF,#F6FDC3) ; */
+        background-color: #5A72A0;
+
         border-bottom-right-radius: 0;
     }
     .gradient{
@@ -252,7 +264,8 @@
     }
     .login-input-container{
         width: 100%;
-        background: linear-gradient(120deg,#A0DEFF,#F6FDC3) ;
+        /* background: linear-gradient(120deg,#A0DEFF,#F6FDC3) ; */
+        background-color: #5A72A0;
         border-bottom-right-radius: 0;
     }
 }

@@ -35,6 +35,15 @@
     outline: none;
 
 }
+.signup-input-container input[type=text]{
+    width: 90%;
+    height: 2rem;
+    padding: 0.5rem;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+
+}
 .wrapper{
     width: 90%;
     height: 2rem;
@@ -140,7 +149,10 @@
     }
     .signup-input-container{
         width: 100%;
-        background: linear-gradient(120deg,#A0DEFF,#F6FDC3) ;
+        /* background: linear-gradient(120deg,#A0DEFF,#F6FDC3) ; */
+        background: rgb(255, 255, 255,0.25);
+        
+
         border-bottom-right-radius: 0;
     }
     .gradient{
@@ -160,7 +172,10 @@
     }
     .signup-input-container{
         width: 100%;
-        background: linear-gradient(120deg,#A0DEFF,#F6FDC3) ;
+        /* background: linear-gradient(120deg,#A0DEFF,#F6FDC3) ; */
+        background: rgb(255, 255, 255,0.25);
+        
+        
         border-bottom-right-radius: 0;
     }
     .gradient{
@@ -183,7 +198,9 @@
     }
     .signup-input-container{
         width: 100%;
-        background: linear-gradient(120deg,#A0DEFF,#F6FDC3) ;
+        /* background: linear-gradient(120deg,#A0DEFF,#F6FDC3) ; */
+        background-color: #5A72A0;
+
         border-bottom-right-radius: 0;
     }
     .gradient{
@@ -206,7 +223,9 @@
     }
     .signup-input-container{
         width: 100%;
-        background: linear-gradient(120deg,#A0DEFF,#F6FDC3) ;
+        /* background: linear-gradient(120deg,#A0DEFF,#F6FDC3) ; */
+        background-color: #5A72A0;
+
         border-bottom-right-radius: 0;
     }
     .gradient{
@@ -229,7 +248,9 @@
     }
     .signup-input-container{
         width: 100%;
-        background: linear-gradient(120deg,#A0DEFF,#F6FDC3) ;
+        /* background: linear-gradient(120deg,#A0DEFF,#F6FDC3) ; */
+        background-color: #5A72A0;
+
         border-bottom-right-radius: 0;
     }
     .gradient{
@@ -252,7 +273,8 @@
     }
     .signup-input-container{
         width: 100%;
-        background: linear-gradient(120deg,#A0DEFF,#F6FDC3) ;
+        /* background: linear-gradient(120deg,#A0DEFF,#F6FDC3) ; */
+        background-color: #5A72A0;
         border-bottom-right-radius: 0;
     }
 }

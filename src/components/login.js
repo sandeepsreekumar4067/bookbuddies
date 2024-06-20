@@ -4,7 +4,7 @@ import NavigationBar from "./navigationbar";
 import { useState } from "react";
 import { FaEye,FaEyeSlash } from "react-icons/fa";
 import { useLocation,useNavigate } from "react-router-dom";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { sendPasswordResetEmail, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./firebaseconfig";
 const Login = () => {
     const locaiton = useLocation()
@@ -47,6 +47,34 @@ const Login = () => {
             }         
         }
     }
+    const handlePasswordReset = async(mail) =>{
+        const mailPart = email.split("@")
+        if(mail.length===0){
+            alert("Enter your Email First")
+        }else if(!(mail.includes("@"))){
+            alert("Enter a Valid Email")
+        }else if (mailPart.length !== 2 || mailPart[1].length === 0) {
+            alert("You must enter a valid email");
+        }else{
+            //allconditions passed
+            try{
+                await sendPasswordResetEmail(auth,email)
+                .then(()=>{
+                    alert("a password recovery email has been send to your account")
+                })
+            }catch(err){
+                const errorCode = err.code;
+                const errorMessage = err.message;
+                const match = errorMessage.match(/\(([^)]+)\)/);
+                var formattedErrorMessage = match ? match[1] : errorMessage;
+                if (formattedErrorMessage.startsWith('auth/')) {
+                    formattedErrorMessage = formattedErrorMessage.replace('auth/', '');
+                }
+                console.log(errorCode, formattedErrorMessage);
+                alert(formattedErrorMessage); 
+            }
+        }
+    }
     return ( 
         <div className="login-container">
             <NavigationBar/>
@@ -78,6 +106,9 @@ const Login = () => {
                         )
                     }
                     </div>
+                    <a className="reset-link" onClick={()=>{
+                        handlePasswordReset(email)
+                    }}>forgot password..?</a>
                     <input type="button" value="Login" onClick={
                         ()=>{
                             emailchecking(email)

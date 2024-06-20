@@ -23,7 +23,6 @@
 }
 
 .book-item:hover{
-    scale: 1.08;
     background-color: #B5C0D0;
     border-radius: 20px;
     cursor: pointer;

@@ -51,9 +51,11 @@
     height: 100%;
     width: 100%;
     outline: none;
+    position: relative;
     border: none;
 }
 .wrapper input[type="text"]{
+    position: relative;
     height: 100%;
     width: 100%;
     outline: none;
@@ -70,6 +72,14 @@
     outline: none;
     background-color: #19376D;
     color: white;
+}
+.reset-link{
+    position: absolute;
+    font-size: 1rem;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 15rem;
+    color: purple;
 }
 .image-container{
     height: 30rem;

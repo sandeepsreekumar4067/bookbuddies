@@ -1,14 +1,15 @@
-import { useState, useEffect } from "react";
+import React, { useContext } from "react";
 import { FaSearch } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import "../style/navigationbar.css";
-
+import AuthContext from "../components/authContext.js";
+import { useState,useEffect } from "react";
 const NavigationBar = () => {
     const [isExpanded, setIsExpanded] = useState(false);
     const [inputValue, setInputValue] = useState("");
     const [menuActive, setMenuActive] = useState(false);
-
     const location = useLocation();
+    const { isLoggedIn, logout } = useContext(AuthContext);
 
     // Toggle the expansion of the search input field
     const handleSearchIconClick = () => {
@@ -48,8 +49,10 @@ const NavigationBar = () => {
                     />
                 </div>
                 <Link to="/" className="nav-link"><span>Home</span></Link>
-                <Link to="/login" className="nav-link"><span>Login</span></Link>
-                <Link to="/signup" className="nav-link"><span>Signup</span></Link>
+                {!isLoggedIn && <Link to="/login" className="nav-link"><span>Login</span></Link>}
+                {!isLoggedIn && <Link to="/signup" className="nav-link"><span>Signup</span></Link>}
+                {isLoggedIn && <Link to="/profile" className="nav-link"><span>Profile</span></Link>}
+                {isLoggedIn &&  <Link className="nav-link"><span onClick={logout} >Logout</span></Link>}
             </div>
             <button className="menu-button" onClick={handleMenuButtonClick}>
                 {menuActive ? "Close" : "Menu"}

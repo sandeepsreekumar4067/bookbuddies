@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Home from './components/homepage';
-import BookInterface from './components/bookinterface';
 import NavigationBar from './components/navigationbar';
 import Login from './components/login';
 import Signup from './components/signup';

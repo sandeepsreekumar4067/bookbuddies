@@ -4,14 +4,15 @@ import NavigationBar from "./navigationbar";
 import { useState } from "react";
 import { FaEyeSlash } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
-import { useLocation,useNavigate } from "react-router-dom";
+import { auth } from "./firebaseconfig";
+import { useNavigate } from "react-router-dom";
+import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 const Signup = () => {
     const [passVisibility,setpassVisibility] = useState(false)
-    const [password,setPassword] = useState('')
-    const [confirmPassword,setconfirmPassword] = useState('')
+    const [password,setPassword] = useState('')//contains the password of the user
+    const [confirmPassword,setconfirmPassword] = useState('')//for confirming the password of the user 
     const [confirmPasswordVisibility,setConfirmPasswordVisibility] = useState(false)
-    const [email,setEmail] = useState("")
-    const location = useLocation()
+    const [email,setEmail] = useState("")//contains the email of the user
     const navigate = useNavigate()
     const handleEmailEntry = (e) =>{
         setEmail(e.target.value)
@@ -22,7 +23,7 @@ const Signup = () => {
     const handleConfirmPassword = (e) =>{
         setconfirmPassword(e.target.value)
     }
-    const handlePasswordConfirmation = (pass1,pass2) =>{
+    const handlePasswordConfirmation = async() =>{
         const emailParts = email.split("@")
         if (email.length===0){
             alert("Enter an email")
@@ -38,9 +39,21 @@ const Signup = () => {
             alert("You must confirm the password");
         } else if (password !== confirmPassword) {
             alert("Entered passwords don't match");
-        } else {
-            alert("Success! Welcome to the family");
-            navigate("/home");
+        } 
+        else {
+            //all conditions passed proceed to make the user 
+            try{
+                const userCredentials = await createUserWithEmailAndPassword(auth,email,password)
+                const user = userCredentials.user
+                await sendEmailVerification(user)
+                alert("Verification email sent! Please check your inbox.");
+                console.log("Success");
+                console.log(user);
+                navigate("/login")
+            }catch(err){
+                console.log("Error");
+                alert(err.message);
+            }
         }
     }
     return ( 
@@ -94,7 +107,7 @@ const Signup = () => {
                     </div>
                     <input type="button" value="Signup" onClick={
                         ()=>{
-                            handlePasswordConfirmation(password,confirmPassword)
+                            handlePasswordConfirmation()
                         }
                     } />
                 </div>

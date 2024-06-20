@@ -1,0 +1,85 @@
+.profile-container{
+    height: auto;
+    width: 100%;
+    padding-top: 10%;
+    color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+.profile-title{
+    margin-top: 1rem;
+    font-size: 3rem;
+}
+.profile-section{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.bookAdd-section{
+    height: 30rem;
+    width: 50%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bookAdd-section input[type="text"]{
+    width: 60%;
+    padding: 1rem;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+}
+.bookAdd-section input[type="number"]{
+    width: 60%;
+    padding: 1rem;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+}
+.bookAdd-section textarea{
+    width: 70%;
+    padding: 0.8rem;
+    height: 13rem;
+    resize: none;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+.bookAdd-section input[type="button"]{
+    width: 10rem;
+    padding: 0.6rem;
+    font-size: 1.3rem;
+    font-weight: 300;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: #19376D;
+    transition: 0.4s;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.bookView-section{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

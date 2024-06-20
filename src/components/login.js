@@ -35,10 +35,15 @@ const Login = () => {
                 alert("Welcome Back")
                 navigate("/home")
             }catch(err){
-                console.log("error");
-                console.log(err.code);
-                console.log(err.message);
-                alert("Invalid Credentials")
+                const errorCode = err.code;
+                const errorMessage = err.message;
+                const match = errorMessage.match(/\(([^)]+)\)/);
+                var formattedErrorMessage = match ? match[1] : errorMessage;
+                if (formattedErrorMessage.startsWith('auth/')) {
+                    formattedErrorMessage = formattedErrorMessage.replace('auth/', '');
+                }
+                console.log(errorCode, formattedErrorMessage);
+                alert(formattedErrorMessage); 
             }         
         }
     }

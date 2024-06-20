@@ -4,6 +4,8 @@ import NavigationBar from "./navigationbar";
 import { useState } from "react";
 import { FaEye,FaEyeSlash } from "react-icons/fa";
 import { useLocation,useNavigate } from "react-router-dom";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "./firebaseconfig";
 const Login = () => {
     const locaiton = useLocation()
     const navigate = useNavigate()
@@ -16,7 +18,7 @@ const Login = () => {
     const handleEmailInput = (e)=>{
         setEmail(e.target.value)
     }
-    const emailchecking = (mail) =>{
+    const emailchecking = async (mail) =>{
         const mailPart = email.split("@")
         if(mail.length===0){
             alert("Enter your Email First")
@@ -27,8 +29,17 @@ const Login = () => {
         }else if(password.length===0){
             alert("Please enter your password")
         }else{
-            alert("Success")
-            navigate("/home")
+            //if all conditions pass
+            try{
+                const userCredentials = await signInWithEmailAndPassword(auth,email,password)
+                alert("Welcome Back")
+                navigate("/home")
+            }catch(err){
+                console.log("error");
+                console.log(err.code);
+                console.log(err.message);
+                alert("Invalid Credentials")
+            }         
         }
     }
     return ( 

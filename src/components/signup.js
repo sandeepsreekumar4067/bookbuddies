@@ -51,8 +51,15 @@ const Signup = () => {
                 console.log(user);
                 navigate("/login")
             }catch(err){
-                console.log("Error");
-                alert(err.message);
+                const errorCode = err.code;
+                const errorMessage = err.message;
+                const match = errorMessage.match(/\(([^)]+)\)/);
+                var formattedErrorMessage = match ? match[1] : errorMessage;
+                if (formattedErrorMessage.startsWith('auth/')) {
+                    formattedErrorMessage = formattedErrorMessage.replace('auth/', '');
+                }
+                console.log(errorCode, formattedErrorMessage);
+                alert(formattedErrorMessage); 
             }
         }
     }

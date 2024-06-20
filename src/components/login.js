@@ -1,12 +1,13 @@
 import "../style/login.css"
 import loginImage from "../assets/loginImage.png"
 import NavigationBar from "./navigationbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaEye,FaEyeSlash } from "react-icons/fa";
 import { useLocation,useNavigate } from "react-router-dom";
 import { sendPasswordResetEmail, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./firebaseconfig";
 const Login = () => {
+    const [loggedIn,setLoggedIn] = useState(false)
     const locaiton = useLocation()
     const navigate = useNavigate()
     const [email,setEmail] = useState('')
@@ -32,6 +33,8 @@ const Login = () => {
             //if all conditions pass
             try{
                 const userCredentials = await signInWithEmailAndPassword(auth,email,password)
+                setLoggedIn(true)
+                localStorage.setItem("logged in",true)
                 alert("Welcome Back")
                 navigate("/home")
             }catch(err){
@@ -75,6 +78,11 @@ const Login = () => {
             }
         }
     }
+    useEffect(()=>{
+        if(loggedIn){
+            localStorage.setItem("logged in",true)
+        }
+    },[loggedIn])
     return ( 
         <div className="login-container">
             <NavigationBar/>

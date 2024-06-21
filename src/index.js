@@ -10,6 +10,7 @@ import NotFound from './components/notFound';
 import { BrowserRouter as Router , Routes,Route } from 'react-router-dom';
 import { AuthProvider } from './components/authContext';
 import Profile from './components/profile';
+import GeminiButton from './components/geminiButton';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,6 +26,7 @@ root.render(
       <Route path='*' element={<NotFound/>}/>
     </Routes>
   </Router>
+  <GeminiButton/>
   </AuthProvider>
 );
 

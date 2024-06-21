@@ -13,6 +13,7 @@
 
 # misc
 /src/components/firebaseconfig.js
+/src/components/GeminiModel.js
 .env
 .DS_Store
 .env.local

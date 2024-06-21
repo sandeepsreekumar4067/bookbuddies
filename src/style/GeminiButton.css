@@ -43,6 +43,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 .closeButton-container{
     width: 100%;
@@ -60,8 +61,8 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: end;
     justify-content: end;
+    overflow-y: auto; /* Added scroll behavior */
 }
 .chat-input{
     height: 8%;
@@ -87,6 +88,16 @@
     margin: 0.3rem;
     padding: 0.8rem;
     border-radius: 20px 20px 0px 20px;
-    height: 1.8rem;
+    height: auto;
     background-color: #A0DEFF;
+}
+.aiChat{
+    color: black;
+    font-size: 1.3rem;
+    width: auto;
+    margin: 0.3rem;
+    padding: 0.8rem;
+    border-radius: 20px 20px 20px 0px;
+    height: auto;
+    background-color: #FFEC9E;
 }

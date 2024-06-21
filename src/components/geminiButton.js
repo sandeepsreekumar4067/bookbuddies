@@ -3,9 +3,10 @@ import ai from "../assets/ai2.png";
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import { CiLocationArrow1 } from "react-icons/ci";
+import { run } from "./GeminiModel";
 const GeminiButton = () => {
     const [clicked, setClicked] = useState(false);
-    const [inputValues, setInputValues] = useState([]);
+    const [chatMessages, setChatMessages] = useState([]);
     const [currentInput, setCurrentInput] = useState("");
 
     const handleButtonclick = () => {
@@ -16,12 +17,23 @@ const GeminiButton = () => {
         setCurrentInput(event.target.value);
     };
 
-    const handleArrowButtonClick = () => {
+    const handleArrowButtonClick = async () => {
+        setCurrentInput("")
         if (currentInput.trim() !== "") {
-            setInputValues([...inputValues, currentInput]);
-            setCurrentInput("");
+            // Add user input to chatMessages
+            setChatMessages(prevMessages => [
+                ...prevMessages,
+                { text: currentInput, userInput: true }
+            ]);
+            
+            // Simulate AI response (replace with your actual AI logic)
+            const aiResponse = await run(currentInput); // Assuming run is your AI function
+            // Add AI response to chatMessages
+            setChatMessages(prevMessages => [
+                ...prevMessages,
+                { text: aiResponse, userInput: false }
+            ]);
         }
-        console.log(inputValues);
     };
 
     return ( 
@@ -38,8 +50,10 @@ const GeminiButton = () => {
                         </div>
                         <div className="chat-container">
                             {/* Display stored input values */}
-                            {inputValues.map((value, index) => (
-                                <div className="userChat" key={index}>{value}</div>
+                            {chatMessages.map((message, index) => (
+                                <div key={index} className={message.userInput ? "userChat" : "aiChat"}>
+                                    {message.text}
+                                </div>
                             ))}
                         </div>
                         <div className="chat-input">
